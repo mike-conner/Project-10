@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  RoverPhotoSelectionViewController.swift
 //  NASA APP
 //
 //  Created by Mike Conner on 8/18/19.
@@ -8,13 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class RoverPhotoSelectionViewController: UIViewController {
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
 }
-

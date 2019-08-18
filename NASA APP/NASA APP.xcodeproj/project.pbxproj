@@ -3,16 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		135D8EF2230994C000B4DF2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135D8EF1230994C000B4DF2E /* AppDelegate.swift */; };
-		135D8EF4230994C000B4DF2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135D8EF3230994C000B4DF2E /* ViewController.swift */; };
+		135D8EF4230994C000B4DF2E /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135D8EF3230994C000B4DF2E /* HomeScreenViewController.swift */; };
 		135D8EF7230994C000B4DF2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 135D8EF5230994C000B4DF2E /* Main.storyboard */; };
 		135D8EF9230994C000B4DF2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 135D8EF8230994C000B4DF2E /* Assets.xcassets */; };
 		135D8EFC230994C000B4DF2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 135D8EFA230994C000B4DF2E /* LaunchScreen.storyboard */; };
 		135D8F07230994C000B4DF2E /* NASA_APPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135D8F06230994C000B4DF2E /* NASA_APPTests.swift */; };
+		13DFEDCC2309A058005B01E6 /* RoverPhotoSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DFEDCB2309A058005B01E6 /* RoverPhotoSelectionViewController.swift */; };
+		13DFEDCE2309A2BF005B01E6 /* MarsRovers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DFEDCD2309A2BF005B01E6 /* MarsRovers.swift */; };
 		54564A9F0D925ED80B5145B9 /* Pods_NASA_APP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A50EF197ACE7B7AD53F1C6CE /* Pods_NASA_APP.framework */; };
 		622E2D370E61B2BCF56A13FE /* Pods_NASA_APPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A19DB1CFC4F099E93D7195 /* Pods_NASA_APPTests.framework */; };
 /* End PBXBuildFile section */
@@ -30,7 +32,7 @@
 /* Begin PBXFileReference section */
 		135D8EEE230994C000B4DF2E /* NASA APP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NASA APP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		135D8EF1230994C000B4DF2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		135D8EF3230994C000B4DF2E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		135D8EF3230994C000B4DF2E /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		135D8EF6230994C000B4DF2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		135D8EF8230994C000B4DF2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		135D8EFB230994C000B4DF2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +40,8 @@
 		135D8F02230994C000B4DF2E /* NASA APPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NASA APPTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		135D8F06230994C000B4DF2E /* NASA_APPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASA_APPTests.swift; sourceTree = "<group>"; };
 		135D8F08230994C000B4DF2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13DFEDCB2309A058005B01E6 /* RoverPhotoSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverPhotoSelectionViewController.swift; sourceTree = "<group>"; };
+		13DFEDCD2309A2BF005B01E6 /* MarsRovers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsRovers.swift; sourceTree = "<group>"; };
 		1AB627855B1BC8218EF18B6A /* Pods-NASA APPTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NASA APPTests.debug.xcconfig"; path = "Target Support Files/Pods-NASA APPTests/Pods-NASA APPTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2092FCF1DA6880663ABC8016 /* Pods-NASA APP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NASA APP.debug.xcconfig"; path = "Target Support Files/Pods-NASA APP/Pods-NASA APP.debug.xcconfig"; sourceTree = "<group>"; };
 		3B5A3FFE9F572D8848CD49B7 /* Pods-NASA APP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NASA APP.release.xcconfig"; path = "Target Support Files/Pods-NASA APP/Pods-NASA APP.release.xcconfig"; sourceTree = "<group>"; };
@@ -90,11 +94,11 @@
 			isa = PBXGroup;
 			children = (
 				135D8EF1230994C000B4DF2E /* AppDelegate.swift */,
-				135D8EF3230994C000B4DF2E /* ViewController.swift */,
-				135D8EF5230994C000B4DF2E /* Main.storyboard */,
-				135D8EF8230994C000B4DF2E /* Assets.xcassets */,
-				135D8EFA230994C000B4DF2E /* LaunchScreen.storyboard */,
+				13DFEDCA230999DD005B01E6 /* Model */,
+				13DFEDC9230999DB005B01E6 /* View */,
+				13DFEDC8230999D9005B01E6 /* Controller */,
 				135D8EFD230994C000B4DF2E /* Info.plist */,
+				135D8EF8230994C000B4DF2E /* Assets.xcassets */,
 			);
 			path = "NASA APP";
 			sourceTree = "<group>";
@@ -108,6 +112,32 @@
 			path = "NASA APPTests";
 			sourceTree = "<group>";
 		};
+		13DFEDC8230999D9005B01E6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				135D8EF3230994C000B4DF2E /* HomeScreenViewController.swift */,
+				13DFEDCB2309A058005B01E6 /* RoverPhotoSelectionViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		13DFEDC9230999DB005B01E6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				135D8EFA230994C000B4DF2E /* LaunchScreen.storyboard */,
+				135D8EF5230994C000B4DF2E /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		13DFEDCA230999DD005B01E6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				13DFEDCD2309A2BF005B01E6 /* MarsRovers.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		1E19BB94AECD7B20D1EF8E6B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,7 +146,6 @@
 				1AB627855B1BC8218EF18B6A /* Pods-NASA APPTests.debug.xcconfig */,
 				547318E7BDBB8E79525623F4 /* Pods-NASA APPTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -315,8 +344,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				135D8EF4230994C000B4DF2E /* ViewController.swift in Sources */,
+				13DFEDCC2309A058005B01E6 /* RoverPhotoSelectionViewController.swift in Sources */,
+				135D8EF4230994C000B4DF2E /* HomeScreenViewController.swift in Sources */,
 				135D8EF2230994C000B4DF2E /* AppDelegate.swift in Sources */,
+				13DFEDCE2309A2BF005B01E6 /* MarsRovers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

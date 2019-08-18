@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mx4-11-d0X">
+    <device id="ipad12_9rounded" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home Screen View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeScreenViewController" customModule="NASA_APP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="12U-hD-TSs">
+                                <rect key="frame" x="8" y="82" width="1008" height="1256"/>
+                                <subviews>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4m-MK-E32">
+                                        <rect key="frame" x="0.0" y="0.0" width="1008" height="624"/>
+                                        <state key="normal" backgroundImage="marsRover"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="marsRoverButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uUj-2n-TB4"/>
+                                            <segue destination="59z-Op-3d5" kind="show" identifier="marsRoverSegue" id="dsb-s5-v0a"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lKk-r1-ZEZ">
+                                        <rect key="frame" x="0.0" y="632" width="1008" height="624"/>
+                                        <state key="normal" backgroundImage="eyeInTheSky"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="eyeInTheSkyButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z5O-1S-XGa"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="12U-hD-TSs" secondAttribute="trailing" constant="8" id="Ahd-rY-LeF"/>
+                            <constraint firstItem="12U-hD-TSs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="amw-nF-X3I"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="12U-hD-TSs" secondAttribute="bottom" constant="8" id="cbX-he-T1k"/>
+                            <constraint firstItem="12U-hD-TSs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="zjE-vK-Mw9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="udS-yG-Cxp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="765.234375" y="13.616398243045387"/>
+        </scene>
+        <!--Rover Photo Selection View Controller-->
+        <scene sceneID="Z4z-zJ-qrB">
+            <objects>
+                <viewController id="59z-Op-3d5" customClass="RoverPhotoSelectionViewController" customModule="NASA_APP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9EC-Um-IlI">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your rover..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdr-cj-evN">
+                                <rect key="frame" x="262" y="130" width="500" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="500" id="XR6-6R-XUj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fbO-3b-xmx">
+                                <rect key="frame" x="212" y="190" width="600" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="600" id="QwE-kk-cQP"/>
+                                    <constraint firstAttribute="height" constant="50" id="lFk-w3-prY"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Curiousity"/>
+                                    <segment title="Opportunity"/>
+                                    <segment title="Spirit"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your camera..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4Q-9y-rys">
+                                <rect key="frame" x="262" y="296" width="500" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="500" id="OQc-CW-iHz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dGe-nM-qJU">
+                                <rect key="frame" x="212" y="356" width="600" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0IC-vz-Mhb"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="600" id="Ocg-di-1uf"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Camera 1"/>
+                                    <segment title="Camera 2"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqU-Xc-H9p">
+                                <rect key="frame" x="437" y="462" width="150" height="60"/>
+                                <color key="backgroundColor" red="0.01833007671" green="0.49739444259999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="9lg-Jj-kSf"/>
+                                    <constraint firstAttribute="height" constant="60" id="VLk-WY-1nb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Search"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" image="nasa" translatesAutoresizingMaskIntoConstraints="NO" id="P0G-Fs-guL">
+                                <rect key="frame" x="8" y="578" width="1008" height="760"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pdr-cj-evN" firstAttribute="top" secondItem="ceE-gb-e0n" secondAttribute="top" constant="56" id="1zy-qO-blx"/>
+                            <constraint firstItem="P0G-Fs-guL" firstAttribute="leading" secondItem="ceE-gb-e0n" secondAttribute="leading" constant="8" id="2f0-bQ-H2K"/>
+                            <constraint firstItem="C4Q-9y-rys" firstAttribute="centerX" secondItem="9EC-Um-IlI" secondAttribute="centerX" id="4Hf-Ok-Sbp"/>
+                            <constraint firstItem="C4Q-9y-rys" firstAttribute="top" secondItem="fbO-3b-xmx" secondAttribute="bottom" constant="56" id="5iP-Zd-pmi"/>
+                            <constraint firstItem="wqU-Xc-H9p" firstAttribute="centerX" secondItem="9EC-Um-IlI" secondAttribute="centerX" id="Acg-FG-xvO"/>
+                            <constraint firstItem="wqU-Xc-H9p" firstAttribute="top" secondItem="dGe-nM-qJU" secondAttribute="bottom" constant="56" id="KFj-h6-EUH"/>
+                            <constraint firstItem="dGe-nM-qJU" firstAttribute="centerX" secondItem="C4Q-9y-rys" secondAttribute="centerX" id="QMt-2O-cHH"/>
+                            <constraint firstItem="pdr-cj-evN" firstAttribute="centerX" secondItem="9EC-Um-IlI" secondAttribute="centerX" id="SFQ-kd-zXq"/>
+                            <constraint firstItem="fbO-3b-xmx" firstAttribute="top" secondItem="pdr-cj-evN" secondAttribute="bottom" constant="24" id="Tzn-EZ-g0d"/>
+                            <constraint firstItem="ceE-gb-e0n" firstAttribute="bottom" secondItem="P0G-Fs-guL" secondAttribute="bottom" constant="8" id="UJh-4C-bK1"/>
+                            <constraint firstItem="dGe-nM-qJU" firstAttribute="top" secondItem="C4Q-9y-rys" secondAttribute="bottom" constant="24" id="dSV-Ql-zf2"/>
+                            <constraint firstItem="fbO-3b-xmx" firstAttribute="centerX" secondItem="pdr-cj-evN" secondAttribute="centerX" id="gyo-X5-m3u"/>
+                            <constraint firstItem="P0G-Fs-guL" firstAttribute="top" secondItem="wqU-Xc-H9p" secondAttribute="bottom" constant="56" id="hra-07-kBg"/>
+                            <constraint firstItem="ceE-gb-e0n" firstAttribute="trailing" secondItem="P0G-Fs-guL" secondAttribute="trailing" constant="8" id="yTS-n0-j8Q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ceE-gb-e0n"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hFB-be-Q9m"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TJX-ez-3gR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1562.6953125" y="-286.38360175695459"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gkk-9D-qUc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Mx4-11-d0X" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Hqh-uW-8qb">
+                        <rect key="frame" x="0.0" y="24" width="1024" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="g5U-2j-xPb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o8t-5i-hz8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="64" y="14"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="eyeInTheSky" width="350" height="262"/>
+        <image name="marsRover" width="294" height="171"/>
+        <image name="nasa" width="1224" height="1024"/>
+    </resources>
+</document>
