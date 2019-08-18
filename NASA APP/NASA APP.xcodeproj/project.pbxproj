@@ -16,6 +16,8 @@
 		13C7C1EC2309FB2300E85B62 /* PhotoGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C7C1EB2309FB2300E85B62 /* PhotoGalleryViewController.swift */; };
 		13C7C1EF2309FD0400E85B62 /* photoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C7C1EE2309FD0400E85B62 /* photoCell.swift */; };
 		13C7C1F3230A041800E85B62 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C7C1F2230A041800E85B62 /* NetworkingManager.swift */; };
+		13C7C1F5230A085000E85B62 /* MarsPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C7C1F4230A085000E85B62 /* MarsPhotos.swift */; };
+		13C7C1F7230A098700E85B62 /* NetworkingErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C7C1F6230A098700E85B62 /* NetworkingErrors.swift */; };
 		13DFEDCC2309A058005B01E6 /* RoverPhotoSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DFEDCB2309A058005B01E6 /* RoverPhotoSelectionViewController.swift */; };
 		13DFEDCE2309A2BF005B01E6 /* MarsRovers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DFEDCD2309A2BF005B01E6 /* MarsRovers.swift */; };
 		54564A9F0D925ED80B5145B9 /* Pods_NASA_APP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A50EF197ACE7B7AD53F1C6CE /* Pods_NASA_APP.framework */; };
@@ -46,6 +48,8 @@
 		13C7C1EB2309FB2300E85B62 /* PhotoGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryViewController.swift; sourceTree = "<group>"; };
 		13C7C1EE2309FD0400E85B62 /* photoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photoCell.swift; sourceTree = "<group>"; };
 		13C7C1F2230A041800E85B62 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		13C7C1F4230A085000E85B62 /* MarsPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsPhotos.swift; sourceTree = "<group>"; };
+		13C7C1F6230A098700E85B62 /* NetworkingErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingErrors.swift; sourceTree = "<group>"; };
 		13DFEDCB2309A058005B01E6 /* RoverPhotoSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverPhotoSelectionViewController.swift; sourceTree = "<group>"; };
 		13DFEDCD2309A2BF005B01E6 /* MarsRovers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsRovers.swift; sourceTree = "<group>"; };
 		1AB627855B1BC8218EF18B6A /* Pods-NASA APPTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NASA APPTests.debug.xcconfig"; path = "Target Support Files/Pods-NASA APPTests/Pods-NASA APPTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -131,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				13C7C1F2230A041800E85B62 /* NetworkingManager.swift */,
+				13C7C1F6230A098700E85B62 /* NetworkingErrors.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -157,8 +162,9 @@
 		13DFEDCA230999DD005B01E6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				13DFEDCD2309A2BF005B01E6 /* MarsRovers.swift */,
 				13C7C1EE2309FD0400E85B62 /* photoCell.swift */,
+				13DFEDCD2309A2BF005B01E6 /* MarsRovers.swift */,
+				13C7C1F4230A085000E85B62 /* MarsPhotos.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -371,7 +377,9 @@
 			files = (
 				13DFEDCC2309A058005B01E6 /* RoverPhotoSelectionViewController.swift in Sources */,
 				135D8EF4230994C000B4DF2E /* HomeScreenViewController.swift in Sources */,
+				13C7C1F7230A098700E85B62 /* NetworkingErrors.swift in Sources */,
 				13C7C1EF2309FD0400E85B62 /* photoCell.swift in Sources */,
+				13C7C1F5230A085000E85B62 /* MarsPhotos.swift in Sources */,
 				135D8EF2230994C000B4DF2E /* AppDelegate.swift in Sources */,
 				13DFEDCE2309A2BF005B01E6 /* MarsRovers.swift in Sources */,
 				13C7C1EC2309FB2300E85B62 /* PhotoGalleryViewController.swift in Sources */,
