@@ -1,0 +1,841 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1298CF38DF60AC4A56A7FD2CBA026972 /* Nuke-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 958D0AB18B0BA4774A911CE9B1726FAE /* Nuke-dummy.m */; };
+		28F30B593B87BBEFA3E693BE2A11174E /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858FAC5E523AB2C235182115917961EC /* DataLoader.swift */; };
+		2C063B3BEF3C581E33B9B66C7C4D803B /* ImageProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BC23061DB081E9E5CA8A02EC0BD29E /* ImageProcessing.swift */; };
+		3141D17F016A1C7B1B33DAA9D4CE07FC /* ImageTaskMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841BE29D6E4E22E9D23EC3573497B522 /* ImageTaskMetrics.swift */; };
+		3F3794B4BEE2FBCEDCF9599022E801C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		41B3DBF00A2AE9CBCC039B075E2B85F5 /* Pods-NASA APPTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B67BD1CFB5B37FF6AACA2A03D7FE0A6F /* Pods-NASA APPTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		589B86847981B4A5DB56E10AFB853A6C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		65ED1CC3EABA63FB9D56AB5B8EBBFC1B /* Pods-NASA APPTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 95F86DF72B2FC2417212575B9A2FCF3A /* Pods-NASA APPTests-dummy.m */; };
+		7119ECC671B5D507C856BCFDE65A611D /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B78EFEF1EA1A8B6F482B624C87A116 /* ImageCache.swift */; };
+		B170EA97951E165F51FA8F7686669271 /* ImagePipeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DD9A9693B0679C51ABCC1B7121D4E2 /* ImagePipeline.swift */; };
+		B4FCE86BA184325487EE0465261CA111 /* DataCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0133BAA8BF9CEF677F655CCCA79B786 /* DataCache.swift */; };
+		C106C9DB0B20B01498730530DC0C18CF /* ImagePreheater.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF6C6CA6701B8441C38990A23428978 /* ImagePreheater.swift */; };
+		C847535FFFA08E19CFEFD1E181C09C7C /* ImageDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698E2B85A460AD6DD32D044DDF8E344D /* ImageDecoding.swift */; };
+		CB6CBC33BA21913C8D0D3E7857A91DCE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		CF22B95F4979B5384D3FF75A8637128F /* Nuke-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0278C9AE95C42D505F7B1775C5FEF46A /* Nuke-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D458EADCDADA3BB7772BCA6B4234B537 /* Pods-NASA APP-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FE28A8A92B357A84D125F3D501212C67 /* Pods-NASA APP-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D775C176C73D3FCBE660D3642F0ECC4C /* Internal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1751D29F4D09BFA102926465FFBA6E56 /* Internal.swift */; };
+		E20BCE120A0B306A42F6F017203E0C66 /* ImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA0F51150DD3769BB38C6C8EA08D40 /* ImageRequest.swift */; };
+		F84AC07D59C30C6F85EF8AF51206BB1A /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA961EAB8C435BE7A22AE4F5764523CC /* ImageView.swift */; };
+		FF8C8EEF4EBBD5D25D256BB5AF9EC6C5 /* Pods-NASA APP-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A7FA0034EBB3340233C7781D558B1A /* Pods-NASA APP-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		60CAD3C762AD46EE7C87E0741D3122FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 062A64896E847A6749F58B6BA9A931B1;
+			remoteInfo = Nuke;
+		};
+		C84409A329CC1BF25532A32100D6CBE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E9EE4D433ED6B201AF6692000D3E6B71;
+			remoteInfo = "Pods-NASA APP";
+		};
+		E8DB32306EAC928D15BD1837614353D7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 062A64896E847A6749F58B6BA9A931B1;
+			remoteInfo = Nuke;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0278C9AE95C42D505F7B1775C5FEF46A /* Nuke-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Nuke-umbrella.h"; sourceTree = "<group>"; };
+		05E944ECCB1C91D3A262C9A214205C7A /* Nuke.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Nuke.xcconfig; sourceTree = "<group>"; };
+		14DD9A9693B0679C51ABCC1B7121D4E2 /* ImagePipeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImagePipeline.swift; path = Sources/ImagePipeline.swift; sourceTree = "<group>"; };
+		1751D29F4D09BFA102926465FFBA6E56 /* Internal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Internal.swift; path = Sources/Internal.swift; sourceTree = "<group>"; };
+		17BE423B8F69DF330C6C180A467CC425 /* Pods-NASA APP-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NASA APP-acknowledgements.plist"; sourceTree = "<group>"; };
+		1F036F5C3C424E3A6DBFE7A97900F30E /* Pods-NASA APPTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NASA APPTests.debug.xcconfig"; sourceTree = "<group>"; };
+		26ECE28510ACA83C93803DBBD8BAC651 /* Pods-NASA APPTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NASA APPTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		2DAD7D76FC007F48AE48F2FD15BF01BB /* Nuke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Nuke.framework; path = Nuke.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		4C8922F28E493D428FBC8171FF7D3884 /* Nuke.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Nuke.modulemap; sourceTree = "<group>"; };
+		4E5D64006A8D283677A91E78911B7EF6 /* Pods-NASA APPTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NASA APPTests.modulemap"; sourceTree = "<group>"; };
+		62C6AA109A69996CC87905EE8F976D6A /* Pods-NASA APP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NASA APP.debug.xcconfig"; sourceTree = "<group>"; };
+		698E2B85A460AD6DD32D044DDF8E344D /* ImageDecoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDecoding.swift; path = Sources/ImageDecoding.swift; sourceTree = "<group>"; };
+		6DBA0F51150DD3769BB38C6C8EA08D40 /* ImageRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageRequest.swift; path = Sources/ImageRequest.swift; sourceTree = "<group>"; };
+		72207A658715F122A6545917D1D1D32F /* Nuke-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Nuke-prefix.pch"; sourceTree = "<group>"; };
+		841BE29D6E4E22E9D23EC3573497B522 /* ImageTaskMetrics.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageTaskMetrics.swift; path = Sources/ImageTaskMetrics.swift; sourceTree = "<group>"; };
+		858FAC5E523AB2C235182115917961EC /* DataLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataLoader.swift; path = Sources/DataLoader.swift; sourceTree = "<group>"; };
+		867513DC0F1AA5419A5276D01E0E5D71 /* Pods-NASA APPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NASA APPTests.release.xcconfig"; sourceTree = "<group>"; };
+		8BD182F38B2D8D8B4B84AEF57B248147 /* Pods-NASA APP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NASA APP.release.xcconfig"; sourceTree = "<group>"; };
+		95474B6A7EA1628EBF1C5167C3965708 /* Pods-NASA APP-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NASA APP-Info.plist"; sourceTree = "<group>"; };
+		958D0AB18B0BA4774A911CE9B1726FAE /* Nuke-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Nuke-dummy.m"; sourceTree = "<group>"; };
+		95F86DF72B2FC2417212575B9A2FCF3A /* Pods-NASA APPTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NASA APPTests-dummy.m"; sourceTree = "<group>"; };
+		963CA83E554144B28AC5D9244373C719 /* Pods-NASA APPTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NASA APPTests-Info.plist"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A2BC23061DB081E9E5CA8A02EC0BD29E /* ImageProcessing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageProcessing.swift; path = Sources/ImageProcessing.swift; sourceTree = "<group>"; };
+		B0133BAA8BF9CEF677F655CCCA79B786 /* DataCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataCache.swift; path = Sources/DataCache.swift; sourceTree = "<group>"; };
+		B67BD1CFB5B37FF6AACA2A03D7FE0A6F /* Pods-NASA APPTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NASA APPTests-umbrella.h"; sourceTree = "<group>"; };
+		BAF6C6CA6701B8441C38990A23428978 /* ImagePreheater.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImagePreheater.swift; path = Sources/ImagePreheater.swift; sourceTree = "<group>"; };
+		C08E3B4CF916ADE14614557F65791444 /* Pods-NASA APP-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NASA APP-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C6EDB1412A11665B29E9DB1A5AFFA650 /* Pods-NASA APPTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NASA APPTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		CA961EAB8C435BE7A22AE4F5764523CC /* ImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageView.swift; path = Sources/ImageView.swift; sourceTree = "<group>"; };
+		D87EA52FBABB55549B9F58F24ED0E5D6 /* Pods_NASA_APP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NASA_APP.framework; path = "Pods-NASA APP.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8A7FA0034EBB3340233C7781D558B1A /* Pods-NASA APP-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NASA APP-dummy.m"; sourceTree = "<group>"; };
+		D8B78EFEF1EA1A8B6F482B624C87A116 /* ImageCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageCache.swift; path = Sources/ImageCache.swift; sourceTree = "<group>"; };
+		DD25589839B0FCFD53C245F7BE91979B /* Pods_NASA_APPTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NASA_APPTests.framework; path = "Pods-NASA APPTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEA20EAFA4E84C8E09CDB8EB433986A0 /* Pods-NASA APPTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NASA APPTests-frameworks.sh"; sourceTree = "<group>"; };
+		E2FA25DAEFFE216BA2EA098A850D3B41 /* Pods-NASA APP-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NASA APP-frameworks.sh"; sourceTree = "<group>"; };
+		F0FCE2E9D2EBD83C2688FEBCAF8FC9B2 /* Pods-NASA APP.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NASA APP.modulemap"; sourceTree = "<group>"; };
+		F2DF1E3C644EDB21B6771DEED665FBDD /* Nuke-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Nuke-Info.plist"; sourceTree = "<group>"; };
+		FE28A8A92B357A84D125F3D501212C67 /* Pods-NASA APP-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NASA APP-umbrella.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		44E80909694630825706715A7CB1A4BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB6CBC33BA21913C8D0D3E7857A91DCE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F011871410CDADCC4458FBF149C21D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				589B86847981B4A5DB56E10AFB853A6C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECE038CDF0F6F8E63F20C4769D3D8C00 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F3794B4BEE2FBCEDCF9599022E801C9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2F5601CA4E0D94B480EABA8C3169C0D3 /* Pods-NASA APPTests */ = {
+			isa = PBXGroup;
+			children = (
+				4E5D64006A8D283677A91E78911B7EF6 /* Pods-NASA APPTests.modulemap */,
+				C6EDB1412A11665B29E9DB1A5AFFA650 /* Pods-NASA APPTests-acknowledgements.markdown */,
+				26ECE28510ACA83C93803DBBD8BAC651 /* Pods-NASA APPTests-acknowledgements.plist */,
+				95F86DF72B2FC2417212575B9A2FCF3A /* Pods-NASA APPTests-dummy.m */,
+				DEA20EAFA4E84C8E09CDB8EB433986A0 /* Pods-NASA APPTests-frameworks.sh */,
+				963CA83E554144B28AC5D9244373C719 /* Pods-NASA APPTests-Info.plist */,
+				B67BD1CFB5B37FF6AACA2A03D7FE0A6F /* Pods-NASA APPTests-umbrella.h */,
+				1F036F5C3C424E3A6DBFE7A97900F30E /* Pods-NASA APPTests.debug.xcconfig */,
+				867513DC0F1AA5419A5276D01E0E5D71 /* Pods-NASA APPTests.release.xcconfig */,
+			);
+			name = "Pods-NASA APPTests";
+			path = "Target Support Files/Pods-NASA APPTests";
+			sourceTree = "<group>";
+		};
+		310B449A3FCBDCDED44CFD3808E77415 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8F12CF7C49717205057C0700223C930C /* Pods-NASA APP */,
+				2F5601CA4E0D94B480EABA8C3169C0D3 /* Pods-NASA APPTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		389F553A4DE962AC314AC4590661EA79 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2DAD7D76FC007F48AE48F2FD15BF01BB /* Nuke.framework */,
+				D87EA52FBABB55549B9F58F24ED0E5D6 /* Pods_NASA_APP.framework */,
+				DD25589839B0FCFD53C245F7BE91979B /* Pods_NASA_APPTests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8492882954A947DA55628D12AFDD3694 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				88ED9B191B1EB1EF21E0E014CF8D6E87 /* Nuke */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		88ED9B191B1EB1EF21E0E014CF8D6E87 /* Nuke */ = {
+			isa = PBXGroup;
+			children = (
+				B0133BAA8BF9CEF677F655CCCA79B786 /* DataCache.swift */,
+				858FAC5E523AB2C235182115917961EC /* DataLoader.swift */,
+				D8B78EFEF1EA1A8B6F482B624C87A116 /* ImageCache.swift */,
+				698E2B85A460AD6DD32D044DDF8E344D /* ImageDecoding.swift */,
+				14DD9A9693B0679C51ABCC1B7121D4E2 /* ImagePipeline.swift */,
+				BAF6C6CA6701B8441C38990A23428978 /* ImagePreheater.swift */,
+				A2BC23061DB081E9E5CA8A02EC0BD29E /* ImageProcessing.swift */,
+				6DBA0F51150DD3769BB38C6C8EA08D40 /* ImageRequest.swift */,
+				841BE29D6E4E22E9D23EC3573497B522 /* ImageTaskMetrics.swift */,
+				CA961EAB8C435BE7A22AE4F5764523CC /* ImageView.swift */,
+				1751D29F4D09BFA102926465FFBA6E56 /* Internal.swift */,
+				FCBE3974A0BACC76DD95F4AD3CE7F120 /* Support Files */,
+			);
+			name = Nuke;
+			path = Nuke;
+			sourceTree = "<group>";
+		};
+		8F12CF7C49717205057C0700223C930C /* Pods-NASA APP */ = {
+			isa = PBXGroup;
+			children = (
+				F0FCE2E9D2EBD83C2688FEBCAF8FC9B2 /* Pods-NASA APP.modulemap */,
+				C08E3B4CF916ADE14614557F65791444 /* Pods-NASA APP-acknowledgements.markdown */,
+				17BE423B8F69DF330C6C180A467CC425 /* Pods-NASA APP-acknowledgements.plist */,
+				D8A7FA0034EBB3340233C7781D558B1A /* Pods-NASA APP-dummy.m */,
+				E2FA25DAEFFE216BA2EA098A850D3B41 /* Pods-NASA APP-frameworks.sh */,
+				95474B6A7EA1628EBF1C5167C3965708 /* Pods-NASA APP-Info.plist */,
+				FE28A8A92B357A84D125F3D501212C67 /* Pods-NASA APP-umbrella.h */,
+				62C6AA109A69996CC87905EE8F976D6A /* Pods-NASA APP.debug.xcconfig */,
+				8BD182F38B2D8D8B4B84AEF57B248147 /* Pods-NASA APP.release.xcconfig */,
+			);
+			name = "Pods-NASA APP";
+			path = "Target Support Files/Pods-NASA APP";
+			sourceTree = "<group>";
+		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				8492882954A947DA55628D12AFDD3694 /* Pods */,
+				389F553A4DE962AC314AC4590661EA79 /* Products */,
+				310B449A3FCBDCDED44CFD3808E77415 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FCBE3974A0BACC76DD95F4AD3CE7F120 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4C8922F28E493D428FBC8171FF7D3884 /* Nuke.modulemap */,
+				05E944ECCB1C91D3A262C9A214205C7A /* Nuke.xcconfig */,
+				958D0AB18B0BA4774A911CE9B1726FAE /* Nuke-dummy.m */,
+				F2DF1E3C644EDB21B6771DEED665FBDD /* Nuke-Info.plist */,
+				72207A658715F122A6545917D1D1D32F /* Nuke-prefix.pch */,
+				0278C9AE95C42D505F7B1775C5FEF46A /* Nuke-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Nuke";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		23F39F9B06CA496FC7FEE1BFE0C21019 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF22B95F4979B5384D3FF75A8637128F /* Nuke-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26E715F1A79A7196F2AC7CB481741D84 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41B3DBF00A2AE9CBCC039B075E2B85F5 /* Pods-NASA APPTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4AB816875AAB41BF55654913E48610FD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D458EADCDADA3BB7772BCA6B4234B537 /* Pods-NASA APP-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		062A64896E847A6749F58B6BA9A931B1 /* Nuke */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 31404833434413200237F603FEA40587 /* Build configuration list for PBXNativeTarget "Nuke" */;
+			buildPhases = (
+				23F39F9B06CA496FC7FEE1BFE0C21019 /* Headers */,
+				2FCE441B86282D780CE9CA9653F794FE /* Sources */,
+				5F011871410CDADCC4458FBF149C21D5 /* Frameworks */,
+				6FCBC73113287540180C33E89AFBED90 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Nuke;
+			productName = Nuke;
+			productReference = 2DAD7D76FC007F48AE48F2FD15BF01BB /* Nuke.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BDFFDB1C8D593EFC00A9F6FD1AF1D048 /* Pods-NASA APPTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A82D693FDEDA1907F9EF5B69D94F51F /* Build configuration list for PBXNativeTarget "Pods-NASA APPTests" */;
+			buildPhases = (
+				26E715F1A79A7196F2AC7CB481741D84 /* Headers */,
+				D960500002B792F84D036E2D6FCAB213 /* Sources */,
+				ECE038CDF0F6F8E63F20C4769D3D8C00 /* Frameworks */,
+				0AF2026A8FB2C9DC69F3EB2000C64D0C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C3EFA238070C91CFA299D796FD07E3DE /* PBXTargetDependency */,
+				292283767B72CEFB42DD202070D1FFD7 /* PBXTargetDependency */,
+			);
+			name = "Pods-NASA APPTests";
+			productName = "Pods-NASA APPTests";
+			productReference = DD25589839B0FCFD53C245F7BE91979B /* Pods_NASA_APPTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E9EE4D433ED6B201AF6692000D3E6B71 /* Pods-NASA APP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80E02C4EA45603ABD87F6FAF563E6025 /* Build configuration list for PBXNativeTarget "Pods-NASA APP" */;
+			buildPhases = (
+				4AB816875AAB41BF55654913E48610FD /* Headers */,
+				00FAC30B5EC15C1D1356756374C10266 /* Sources */,
+				44E80909694630825706715A7CB1A4BA /* Frameworks */,
+				9F22B92C5786BDEE3C4E03CF3E1C5540 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1574353216CD1A1A5854AE727CDFD8D2 /* PBXTargetDependency */,
+			);
+			name = "Pods-NASA APP";
+			productName = "Pods-NASA APP";
+			productReference = D87EA52FBABB55549B9F58F24ED0E5D6 /* Pods_NASA_APP.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 389F553A4DE962AC314AC4590661EA79 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				062A64896E847A6749F58B6BA9A931B1 /* Nuke */,
+				E9EE4D433ED6B201AF6692000D3E6B71 /* Pods-NASA APP */,
+				BDFFDB1C8D593EFC00A9F6FD1AF1D048 /* Pods-NASA APPTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0AF2026A8FB2C9DC69F3EB2000C64D0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FCBC73113287540180C33E89AFBED90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F22B92C5786BDEE3C4E03CF3E1C5540 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		00FAC30B5EC15C1D1356756374C10266 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF8C8EEF4EBBD5D25D256BB5AF9EC6C5 /* Pods-NASA APP-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FCE441B86282D780CE9CA9653F794FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4FCE86BA184325487EE0465261CA111 /* DataCache.swift in Sources */,
+				28F30B593B87BBEFA3E693BE2A11174E /* DataLoader.swift in Sources */,
+				7119ECC671B5D507C856BCFDE65A611D /* ImageCache.swift in Sources */,
+				C847535FFFA08E19CFEFD1E181C09C7C /* ImageDecoding.swift in Sources */,
+				B170EA97951E165F51FA8F7686669271 /* ImagePipeline.swift in Sources */,
+				C106C9DB0B20B01498730530DC0C18CF /* ImagePreheater.swift in Sources */,
+				2C063B3BEF3C581E33B9B66C7C4D803B /* ImageProcessing.swift in Sources */,
+				E20BCE120A0B306A42F6F017203E0C66 /* ImageRequest.swift in Sources */,
+				3141D17F016A1C7B1B33DAA9D4CE07FC /* ImageTaskMetrics.swift in Sources */,
+				F84AC07D59C30C6F85EF8AF51206BB1A /* ImageView.swift in Sources */,
+				D775C176C73D3FCBE660D3642F0ECC4C /* Internal.swift in Sources */,
+				1298CF38DF60AC4A56A7FD2CBA026972 /* Nuke-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D960500002B792F84D036E2D6FCAB213 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65ED1CC3EABA63FB9D56AB5B8EBBFC1B /* Pods-NASA APPTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1574353216CD1A1A5854AE727CDFD8D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Nuke;
+			target = 062A64896E847A6749F58B6BA9A931B1 /* Nuke */;
+			targetProxy = 60CAD3C762AD46EE7C87E0741D3122FA /* PBXContainerItemProxy */;
+		};
+		292283767B72CEFB42DD202070D1FFD7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-NASA APP";
+			target = E9EE4D433ED6B201AF6692000D3E6B71 /* Pods-NASA APP */;
+			targetProxy = C84409A329CC1BF25532A32100D6CBE9 /* PBXContainerItemProxy */;
+		};
+		C3EFA238070C91CFA299D796FD07E3DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Nuke;
+			target = 062A64896E847A6749F58B6BA9A931B1 /* Nuke */;
+			targetProxy = E8DB32306EAC928D15BD1837614353D7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0D7B1E956DD31D4ECCC0A5744B201DC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 867513DC0F1AA5419A5276D01E0E5D71 /* Pods-NASA APPTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NASA APPTests/Pods-NASA APPTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NASA APPTests/Pods-NASA APPTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		131356BE54884448CA49C07BEDF4BB2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		1F44CA531E454203DA25124149C44FE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BD182F38B2D8D8B4B84AEF57B248147 /* Pods-NASA APP.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NASA APP/Pods-NASA APP-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NASA APP/Pods-NASA APP.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5D446018D4C06DB52BFF1D71C003EE95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62C6AA109A69996CC87905EE8F976D6A /* Pods-NASA APP.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NASA APP/Pods-NASA APP-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NASA APP/Pods-NASA APP.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		79BC99AA117CAAA185BD03473E21816D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F036F5C3C424E3A6DBFE7A97900F30E /* Pods-NASA APPTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NASA APPTests/Pods-NASA APPTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NASA APPTests/Pods-NASA APPTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		95960C5D5EF1D46ADD76BEFDC6153E33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05E944ECCB1C91D3A262C9A214205C7A /* Nuke.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Nuke/Nuke-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Nuke/Nuke-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Nuke/Nuke.modulemap";
+				PRODUCT_MODULE_NAME = Nuke;
+				PRODUCT_NAME = Nuke;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F090CD07A80273D5A73C8EA19224ADDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		FF310731B0BC74310DF1FB0D8EFE857D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05E944ECCB1C91D3A262C9A214205C7A /* Nuke.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Nuke/Nuke-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Nuke/Nuke-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Nuke/Nuke.modulemap";
+				PRODUCT_MODULE_NAME = Nuke;
+				PRODUCT_NAME = Nuke;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		31404833434413200237F603FEA40587 /* Build configuration list for PBXNativeTarget "Nuke" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95960C5D5EF1D46ADD76BEFDC6153E33 /* Debug */,
+				FF310731B0BC74310DF1FB0D8EFE857D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				131356BE54884448CA49C07BEDF4BB2A /* Debug */,
+				F090CD07A80273D5A73C8EA19224ADDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80E02C4EA45603ABD87F6FAF563E6025 /* Build configuration list for PBXNativeTarget "Pods-NASA APP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D446018D4C06DB52BFF1D71C003EE95 /* Debug */,
+				1F44CA531E454203DA25124149C44FE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A82D693FDEDA1907F9EF5B69D94F51F /* Build configuration list for PBXNativeTarget "Pods-NASA APPTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79BC99AA117CAAA185BD03473E21816D /* Debug */,
+				0D7B1E956DD31D4ECCC0A5744B201DC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
