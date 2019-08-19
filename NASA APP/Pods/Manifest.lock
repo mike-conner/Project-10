@@ -1,16 +1,20 @@
 PODS:
+  - Alamofire (5.0.0-beta.7)
   - Nuke (7.6.3)
 
 DEPENDENCIES:
+  - Alamofire (~> 5.0.0-beta.5)
   - Nuke (~> 7.0)
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - Nuke
 
 SPEC CHECKSUMS:
+  Alamofire: bd07938ceecad59d2492aeecb1f785a8f2721160
   Nuke: 44130e95e09463f8773ae4b96b90de1eba6b3350
 
-PODFILE CHECKSUM: ab2ac8532c06472e20b5bb62fa8d12936428797e
+PODFILE CHECKSUM: 535c9417e14acc556eebca578571312855cd5b0c
 
 COCOAPODS: 1.8.0.beta.1

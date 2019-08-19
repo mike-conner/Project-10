@@ -10,7 +10,7 @@ import UIKit
 import Nuke
 
 class NetworkingManager {
-    
+/*
     let earthDate: String = "2019-08-01"         // for testing only!
     
     static let sharedNetworkingManager = NetworkingManager(configuration: .default)
@@ -43,6 +43,6 @@ class NetworkingManager {
             }
         }
     }
-    
+    */
 }
 

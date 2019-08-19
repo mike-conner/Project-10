@@ -8,6 +8,7 @@
 
 import UIKit
 import Nuke
+import Alamofire
 
 private let reuseIdentifier = "PhotoCell"
 
