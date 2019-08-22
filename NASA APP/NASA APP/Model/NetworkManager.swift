@@ -9,10 +9,14 @@
 import Foundation
 import Alamofire
 
+private let API_KEY = "XOl7yfT1mAZlsf3ZsQhMfbUXyG0XSbjzf14dX80z"
+
 class WebAPI {
  
-    func getMarsPhotos(completed: @escaping (_ photos: Photos) -> Void) {
-        guard let url = URL(string: "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=2&api_key=DEMO_KEY") else { return }
+    func getMarsPhotos(rover: Rovers, date: String, completed: @escaping (_ photos: Photos) -> Void) {
+        
+        
+        guard let url = URL(string: "https://api.nasa.gov/mars-photos/api/v1/rovers/\(rover)/photos?earth_date=\(date)&api_key=\(API_KEY)") else { return }
         
         AF.request(url, method: .get).responseJSON { (response) in           
             switch response.result {

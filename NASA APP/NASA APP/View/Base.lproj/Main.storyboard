@@ -95,31 +95,30 @@
                                     <action selector="roverSelectionSegmentControl:" destination="59z-Op-3d5" eventType="valueChanged" id="LJV-A8-1xg"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your camera:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4Q-9y-rys">
-                                <rect key="frame" x="262" y="296" width="500" height="36"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" image="nasa" translatesAutoresizingMaskIntoConstraints="NO" id="P0G-Fs-guL">
+                                <rect key="frame" x="8" y="624" width="1008" height="714"/>
+                            </imageView>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="KQO-nI-o8A">
+                                <rect key="frame" x="352" y="308" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="588206384.85339797">
+                                    <!--2019-08-22 22:39:44 +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="en_US"/>
+                                <connections>
+                                    <action selector="datePicker:" destination="59z-Op-3d5" eventType="valueChanged" id="v5K-lc-Tbf"/>
+                                </connections>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the day:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jDx-RX-u2j">
+                                <rect key="frame" x="0.0" y="264" width="1024" height="36"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="500" id="OQc-CW-iHz"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="500" id="FXF-c6-vVw"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dGe-nM-qJU">
-                                <rect key="frame" x="212" y="356" width="600" height="51"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="0IC-vz-Mhb"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="600" id="Ocg-di-1uf"/>
-                                </constraints>
-                                <segments>
-                                    <segment title="Camera 1"/>
-                                    <segment title="Camera 2"/>
-                                </segments>
-                                <connections>
-                                    <action selector="cameraSelectionSegmentControl:" destination="59z-Op-3d5" eventType="valueChanged" id="yd2-eH-KD2"/>
-                                </connections>
-                            </segmentedControl>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqU-Xc-H9p">
-                                <rect key="frame" x="437" y="462" width="150" height="60"/>
+                                <rect key="frame" x="437" y="548" width="150" height="60"/>
                                 <color key="backgroundColor" red="0.01833007671" green="0.49739444259999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="9lg-Jj-kSf"/>
@@ -138,32 +137,30 @@
                                     <segue destination="uib-ox-cq5" kind="show" identifier="showPhotos" id="CSh-gY-23M"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" image="nasa" translatesAutoresizingMaskIntoConstraints="NO" id="P0G-Fs-guL">
-                                <rect key="frame" x="8" y="578" width="1008" height="760"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="pdr-cj-evN" firstAttribute="top" secondItem="ceE-gb-e0n" secondAttribute="top" constant="56" id="1zy-qO-blx"/>
                             <constraint firstItem="P0G-Fs-guL" firstAttribute="leading" secondItem="ceE-gb-e0n" secondAttribute="leading" constant="8" id="2f0-bQ-H2K"/>
-                            <constraint firstItem="C4Q-9y-rys" firstAttribute="centerX" secondItem="9EC-Um-IlI" secondAttribute="centerX" id="4Hf-Ok-Sbp"/>
-                            <constraint firstItem="C4Q-9y-rys" firstAttribute="top" secondItem="fbO-3b-xmx" secondAttribute="bottom" constant="56" id="5iP-Zd-pmi"/>
-                            <constraint firstItem="wqU-Xc-H9p" firstAttribute="centerX" secondItem="9EC-Um-IlI" secondAttribute="centerX" id="Acg-FG-xvO"/>
-                            <constraint firstItem="wqU-Xc-H9p" firstAttribute="top" secondItem="dGe-nM-qJU" secondAttribute="bottom" constant="56" id="KFj-h6-EUH"/>
-                            <constraint firstItem="dGe-nM-qJU" firstAttribute="centerX" secondItem="C4Q-9y-rys" secondAttribute="centerX" id="QMt-2O-cHH"/>
+                            <constraint firstItem="wqU-Xc-H9p" firstAttribute="centerX" secondItem="9EC-Um-IlI" secondAttribute="centerX" id="8fS-qb-5Yf"/>
+                            <constraint firstItem="wqU-Xc-H9p" firstAttribute="top" secondItem="KQO-nI-o8A" secondAttribute="bottom" constant="24" id="Ifh-W2-e2S"/>
+                            <constraint firstItem="KQO-nI-o8A" firstAttribute="centerX" secondItem="9EC-Um-IlI" secondAttribute="centerX" id="Pf3-qP-7DX"/>
                             <constraint firstItem="pdr-cj-evN" firstAttribute="centerX" secondItem="9EC-Um-IlI" secondAttribute="centerX" id="SFQ-kd-zXq"/>
                             <constraint firstItem="fbO-3b-xmx" firstAttribute="top" secondItem="pdr-cj-evN" secondAttribute="bottom" constant="24" id="Tzn-EZ-g0d"/>
                             <constraint firstItem="ceE-gb-e0n" firstAttribute="bottom" secondItem="P0G-Fs-guL" secondAttribute="bottom" constant="8" id="UJh-4C-bK1"/>
-                            <constraint firstItem="dGe-nM-qJU" firstAttribute="top" secondItem="C4Q-9y-rys" secondAttribute="bottom" constant="24" id="dSV-Ql-zf2"/>
+                            <constraint firstItem="jDx-RX-u2j" firstAttribute="leading" secondItem="ceE-gb-e0n" secondAttribute="leading" id="btd-Ta-XRW"/>
+                            <constraint firstItem="ceE-gb-e0n" firstAttribute="trailing" secondItem="jDx-RX-u2j" secondAttribute="trailing" id="fMj-ru-CKU"/>
                             <constraint firstItem="fbO-3b-xmx" firstAttribute="centerX" secondItem="pdr-cj-evN" secondAttribute="centerX" id="gyo-X5-m3u"/>
-                            <constraint firstItem="P0G-Fs-guL" firstAttribute="top" secondItem="wqU-Xc-H9p" secondAttribute="bottom" constant="56" id="hra-07-kBg"/>
+                            <constraint firstItem="KQO-nI-o8A" firstAttribute="top" secondItem="jDx-RX-u2j" secondAttribute="bottom" constant="8" id="i2Q-1j-P3d"/>
+                            <constraint firstItem="jDx-RX-u2j" firstAttribute="top" secondItem="fbO-3b-xmx" secondAttribute="bottom" constant="24" id="ic4-cJ-42c"/>
+                            <constraint firstItem="P0G-Fs-guL" firstAttribute="top" secondItem="wqU-Xc-H9p" secondAttribute="bottom" constant="16" id="lAF-NT-I1B"/>
                             <constraint firstItem="ceE-gb-e0n" firstAttribute="trailing" secondItem="P0G-Fs-guL" secondAttribute="trailing" constant="8" id="yTS-n0-j8Q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ceE-gb-e0n"/>
                     </view>
                     <navigationItem key="navigationItem" id="hFB-be-Q9m"/>
                     <connections>
-                        <outlet property="cameraSelectionSegmentControl" destination="dGe-nM-qJU" id="GBj-Zc-Pyh"/>
+                        <outlet property="datePicker" destination="KQO-nI-o8A" id="t39-Qp-Vv6"/>
                         <outlet property="roverSelectionSegmentControl" destination="fbO-3b-xmx" id="jd0-aE-oYY"/>
                     </connections>
                 </viewController>
@@ -194,16 +191,26 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7YG-VJ-C2I">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="5" y="5" width="40" height="40"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="15"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </imageView>
                                     </subviews>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="7YG-VJ-C2I" firstAttribute="top" secondItem="jWD-ge-UGE" secondAttribute="top" id="FWf-dI-xXd"/>
-                                    <constraint firstItem="7YG-VJ-C2I" firstAttribute="leading" secondItem="jWD-ge-UGE" secondAttribute="leading" id="Kej-Fp-0NN"/>
-                                    <constraint firstAttribute="bottom" secondItem="7YG-VJ-C2I" secondAttribute="bottom" id="aF4-5O-qUr"/>
-                                    <constraint firstAttribute="trailing" secondItem="7YG-VJ-C2I" secondAttribute="trailing" id="yr4-IS-uiV"/>
+                                    <constraint firstItem="7YG-VJ-C2I" firstAttribute="top" secondItem="jWD-ge-UGE" secondAttribute="top" constant="5" id="FWf-dI-xXd"/>
+                                    <constraint firstItem="7YG-VJ-C2I" firstAttribute="leading" secondItem="jWD-ge-UGE" secondAttribute="leading" constant="5" id="Kej-Fp-0NN"/>
+                                    <constraint firstAttribute="bottom" secondItem="7YG-VJ-C2I" secondAttribute="bottom" constant="5" id="aF4-5O-qUr"/>
+                                    <constraint firstAttribute="trailing" secondItem="7YG-VJ-C2I" secondAttribute="trailing" constant="5" id="yr4-IS-uiV"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="imageView" destination="7YG-VJ-C2I" id="jQR-wd-p2y"/>
                                 </connections>

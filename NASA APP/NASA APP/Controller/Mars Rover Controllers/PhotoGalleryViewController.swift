@@ -17,12 +17,12 @@ class PhotoGalleryViewController: UICollectionViewController {
     static let api = WebAPI()
     
     var userSelectedRover: Rovers?
-    var userSelectedCamera: Cameras?
+    var userSelectedDate: String?
     
     var marsPhotoURLs: Photos?
         
     let cellSpacing: CGFloat = 1
-    let columns: CGFloat = 3
+    let columns: CGFloat = 2
     var cellSize: CGFloat = 0
     
     var pixelSize: CGFloat {
@@ -35,7 +35,9 @@ class PhotoGalleryViewController: UICollectionViewController {
         super.viewDidLoad()
         navigationController?.navigationBar.topItem?.title = "Mars Rover Photos"
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "New Search", style: .done, target: self, action: #selector(goBack))
-        getPhotos()
+        if let rover = userSelectedRover, let date = userSelectedDate {
+            getPhotos(rover: rover, date: date)
+        }
         loadPhotos()
     }
     
@@ -44,8 +46,8 @@ class PhotoGalleryViewController: UICollectionViewController {
         dismiss(animated: true, completion: nil)
     }
 
-    func getPhotos() {
-        PhotoGalleryViewController.api.getMarsPhotos { (photos) in
+    func getPhotos(rover: Rovers, date: String) {
+        PhotoGalleryViewController.api.getMarsPhotos(rover: rover, date: date) { (photos) in
             self.marsPhotoURLs = photos
 //            print(self.marsPhotoURLs?.photos.count ?? "this is supposed to be the number of marsPhotos")
 //            var count = 0
