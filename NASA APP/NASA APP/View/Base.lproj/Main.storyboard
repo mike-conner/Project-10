@@ -132,6 +132,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="searchButton:" destination="59z-Op-3d5" eventType="touchUpInside" id="ajP-OJ-eUo"/>
+                                    <segue destination="uib-ox-cq5" kind="show" identifier="showPhotos" id="CSh-gY-23M"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" image="nasa" translatesAutoresizingMaskIntoConstraints="NO" id="P0G-Fs-guL">

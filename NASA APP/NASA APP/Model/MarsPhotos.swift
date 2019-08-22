@@ -8,11 +8,10 @@
 
 import Foundation
 
-struct Photo: Codable {
-    let imageSource: URL
-    let rover: [String: Rover]
+struct Photos: Codable {
+    var photos: [Photo]
 }
 
-struct Rover: Codable {
-    let landingDate: String
+struct Photo: Codable {
+    var img_src: String
 }

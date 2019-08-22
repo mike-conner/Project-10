@@ -14,6 +14,10 @@ private let reuseIdentifier = "PhotoCell"
 
 class PhotoGalleryViewController: UICollectionViewController {
     
+    static let api = WebAPI()
+    
+    var marsPhotoURLs: Photos?
+        
     let cellSpacing: CGFloat = 1
     let columns: CGFloat = 3
     var cellSize: CGFloat = 0
@@ -30,6 +34,24 @@ class PhotoGalleryViewController: UICollectionViewController {
         
         navigationController?.navigationBar.topItem?.title = "Mars Rover Photos"
         
+        getPhotos()
+        loadPhotos()
+    }
+
+    func getPhotos() {
+        PhotoGalleryViewController.api.getMarsPhotos { (photos) in
+            self.marsPhotoURLs = photos
+//            print(self.marsPhotoURLs?.photos.count ?? "this is supposed to be the number of marsPhotos")
+//            var count = 0
+//            while count < self.marsPhotoURLs?.photos.count ?? 0 {
+//                print(self.marsPhotoURLs?.photos[count].img_src ?? "default value in while statement")
+//                count = count + 1
+//            }
+            self.collectionView.reloadData()
+        }
+    }
+    
+    func loadPhotos() {
         let contentModes = ImageLoadingOptions.ContentModes(success: .scaleAspectFill, failure: .scaleAspectFit, placeholder: .scaleAspectFit)
         
         ImageLoadingOptions.shared.placeholder = UIImage(named: "dark-moon")
@@ -37,27 +59,29 @@ class PhotoGalleryViewController: UICollectionViewController {
         ImageLoadingOptions.shared.transition = .fadeIn(duration: 1.0)
         ImageLoadingOptions.shared.contentModes = contentModes
         
+        DataLoader.sharedUrlCache.diskCapacity = 0
         
+        let pipeline = ImagePipeline {
+            $0.dataCache = try! DataCache(name: "com.mikeconner.NASA-APP.datacache")
+        }
+        ImagePipeline.shared = pipeline
     }
-
+    
     // MARK: UICollectionViewDataSource
-
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        return marsPhotoURLs?.photos.count ?? 25
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! PhotoCell
     
         // Configure the cell
-    
+        if let imageURL = URL(string: marsPhotoURLs?.photos[indexPath.row].img_src ?? "") {
+            let request = ImageRequest(url: imageURL, targetSize: CGSize(width: pixelSize, height: pixelSize), contentMode: .aspectFill)
+            Nuke.loadImage(with: request, into: cell.imageView)
+        }
         return cell
     }
 
@@ -93,3 +117,28 @@ class PhotoGalleryViewController: UICollectionViewController {
     */
 
 }
+
+// MARK: Collection View Delegate Flow Layout Methods
+
+extension PhotoGalleryViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if let layout = collectionViewLayout as? UICollectionViewFlowLayout {
+            let emptySpace = layout.sectionInset.left + layout.sectionInset.right + (columns * cellSpacing - 1)
+            cellSize = (view.frame.size.width - emptySpace) / columns
+            return CGSize(width: cellSize, height: cellSize)
+        }
+        
+        return CGSize()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return cellSpacing
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return cellSpacing
+    }
+}
+
+
+
