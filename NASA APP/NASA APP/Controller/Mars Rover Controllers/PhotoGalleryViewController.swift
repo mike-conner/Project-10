@@ -16,6 +16,9 @@ class PhotoGalleryViewController: UICollectionViewController {
     
     static let api = WebAPI()
     
+    var userSelectedRover: Rovers?
+    var userSelectedCamera: Cameras?
+    
     var marsPhotoURLs: Photos?
         
     let cellSpacing: CGFloat = 1
@@ -30,12 +33,15 @@ class PhotoGalleryViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
- //       self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)    // not sure if this is needed...
-        
         navigationController?.navigationBar.topItem?.title = "Mars Rover Photos"
-        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "New Search", style: .done, target: self, action: #selector(goBack))
         getPhotos()
         loadPhotos()
+    }
+    
+    @objc
+    func goBack() {
+        dismiss(animated: true, completion: nil)
     }
 
     func getPhotos() {
@@ -84,38 +90,6 @@ class PhotoGalleryViewController: UICollectionViewController {
         }
         return cell
     }
-
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
-    }
-    */
-
 }
 
 // MARK: Collection View Delegate Flow Layout Methods

@@ -10,23 +10,42 @@ import UIKit
 
 class RoverPhotoSelectionViewController: UIViewController {
     
+    var userSelectedRover: Rovers?
+    var userSelectedCamera: Cameras?
+    
     @IBOutlet weak var roverSelectionSegmentControl: UISegmentedControl!
     @IBOutlet weak var cameraSelectionSegmentControl: UISegmentedControl!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpCameraOptions()
+        roverSelectionSegmentControl.selectedSegmentIndex = 0
+        cameraSelectionSegmentControl.selectedSegmentIndex = 0
+        userSelectedRover = .Curiosity
+        userSelectedCamera = .FHAZ
     }
     
     @IBAction func roverSelectionSegmentControl(_ sender: Any) {
         setUpCameraOptions()
+        getSelectedRover()
+        cameraSelectionSegmentControl.selectedSegmentIndex = 0
+        userSelectedCamera = .FHAZ
     }
     
+    @IBAction func cameraSelectionSegmentControl(_ sender: Any) {
+        getSelectedCamera()
+    }
     
     @IBAction func searchButton(_ sender: Any) {
-        if cameraSelectionSegmentControl.selectedSegmentIndex != -1 {
-            print("ok")
-        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let destinationViewController = segue.destination as! UINavigationController
+        let targetViewController = destinationViewController.topViewController as! PhotoGalleryViewController
+        
+        targetViewController.userSelectedRover = userSelectedRover
+        targetViewController.userSelectedCamera = userSelectedCamera
     }
     
     func setUpCameraOptions() {
@@ -47,8 +66,29 @@ class RoverPhotoSelectionViewController: UIViewController {
             cameraSelectionSegmentControl.insertSegment(withTitle: "NAVCAM", at: 2, animated: false)
             cameraSelectionSegmentControl.insertSegment(withTitle: "PANCAM", at: 3, animated: false)
             cameraSelectionSegmentControl.insertSegment(withTitle: "MINITES", at: 4, animated: false)
-        default: print("not possible")
+        default: return
         }
     }
     
+    func getSelectedRover() {
+        switch roverSelectionSegmentControl.selectedSegmentIndex {
+        case 0: userSelectedRover = .Curiosity
+        case 1: userSelectedRover = .Opportunity
+        case 2: userSelectedRover = .Spirit
+        default: return
+        }
+    }
+    
+    func getSelectedCamera() {
+        switch cameraSelectionSegmentControl.selectedSegmentIndex {
+        case 0: userSelectedCamera = .FHAZ
+        case 1: userSelectedCamera = .RHAZ
+        case 2: if roverSelectionSegmentControl.selectedSegmentIndex == 0 { userSelectedCamera = .MAST } else { userSelectedCamera = . NAVCAM }
+        case 3: if roverSelectionSegmentControl.selectedSegmentIndex == 0 { userSelectedCamera = .CHEMCAM } else { userSelectedCamera = .PANCAM }
+        case 4: if roverSelectionSegmentControl.selectedSegmentIndex == 0 { userSelectedCamera = .MAHLI } else { userSelectedCamera = .MINITIES }
+        case 5: userSelectedCamera = .MARDI
+        case 6: userSelectedCamera = .NAVCAM
+        default: return
+        }
+    }
 }

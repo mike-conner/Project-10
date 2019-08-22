@@ -17,18 +17,18 @@ class WebAPI {
         AF.request(url, method: .get).responseJSON { (response) in           
             switch response.result {
             case .success:
-                print("success")
+ //               print("success")
                 guard let data = response.data else {
-                    print("successfully retrieved data")
+//                    print("successfully retrieved data")
                     return
                 }
                 do {
                     let myResponse = try JSONDecoder().decode(Photos.self, from: data)
-                    print("JSON decoded successfully")
+//                    print("JSON decoded successfully")
                     completed(myResponse)
                 }
                 catch {
-                    print("JSON did not decode successfully")
+//                    print("JSON did not decode successfully")
                 }
             case .failure(let error):
                 print(error)

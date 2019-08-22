@@ -114,6 +114,9 @@
                                     <segment title="Camera 1"/>
                                     <segment title="Camera 2"/>
                                 </segments>
+                                <connections>
+                                    <action selector="cameraSelectionSegmentControl:" destination="59z-Op-3d5" eventType="valueChanged" id="yd2-eH-KD2"/>
+                                </connections>
                             </segmentedControl>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqU-Xc-H9p">
                                 <rect key="frame" x="437" y="462" width="150" height="60"/>
@@ -160,7 +163,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="hFB-be-Q9m"/>
                     <connections>
-                        <outlet property="cameraSelectionSegmentControl" destination="dGe-nM-qJU" id="H9o-lU-RBm"/>
+                        <outlet property="cameraSelectionSegmentControl" destination="dGe-nM-qJU" id="GBj-Zc-Pyh"/>
                         <outlet property="roverSelectionSegmentControl" destination="fbO-3b-xmx" id="jd0-aE-oYY"/>
                     </connections>
                 </viewController>
@@ -233,7 +236,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o8t-5i-hz8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="64" y="14"/>
+            <point key="canvasLocation" x="-169" y="14"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9ZZ-Sp-htn">
