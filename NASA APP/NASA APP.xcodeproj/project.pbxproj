@@ -14,6 +14,7 @@
 		135D8EF9230994C000B4DF2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 135D8EF8230994C000B4DF2E /* Assets.xcassets */; };
 		135D8EFC230994C000B4DF2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 135D8EFA230994C000B4DF2E /* LaunchScreen.storyboard */; };
 		135D8F07230994C000B4DF2E /* NASA_APPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135D8F06230994C000B4DF2E /* NASA_APPTests.swift */; };
+		136F4AB72311A80300EADF6C /* MarsPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136F4AB62311A80300EADF6C /* MarsPhotoViewController.swift */; };
 		13C7C1EC2309FB2300E85B62 /* PhotoGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C7C1EB2309FB2300E85B62 /* PhotoGalleryViewController.swift */; };
 		13C7C1EF2309FD0400E85B62 /* photoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C7C1EE2309FD0400E85B62 /* photoCell.swift */; };
 		13C7C1F5230A085000E85B62 /* MarsPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C7C1F4230A085000E85B62 /* MarsPhotos.swift */; };
@@ -45,6 +46,7 @@
 		135D8F02230994C000B4DF2E /* NASA APPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NASA APPTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		135D8F06230994C000B4DF2E /* NASA_APPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASA_APPTests.swift; sourceTree = "<group>"; };
 		135D8F08230994C000B4DF2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		136F4AB62311A80300EADF6C /* MarsPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsPhotoViewController.swift; sourceTree = "<group>"; };
 		13C7C1EB2309FB2300E85B62 /* PhotoGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryViewController.swift; sourceTree = "<group>"; };
 		13C7C1EE2309FD0400E85B62 /* photoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photoCell.swift; sourceTree = "<group>"; };
 		13C7C1F4230A085000E85B62 /* MarsPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsPhotos.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			children = (
 				13DFEDCB2309A058005B01E6 /* RoverPhotoSelectionViewController.swift */,
 				13C7C1EB2309FB2300E85B62 /* PhotoGalleryViewController.swift */,
+				136F4AB62311A80300EADF6C /* MarsPhotoViewController.swift */,
 			);
 			path = "Mars Rover Controllers";
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				136F4AB72311A80300EADF6C /* MarsPhotoViewController.swift in Sources */,
 				13DFEDCC2309A058005B01E6 /* RoverPhotoSelectionViewController.swift in Sources */,
 				135D8EF4230994C000B4DF2E /* HomeScreenViewController.swift in Sources */,
 				13C7C1EF2309FD0400E85B62 /* photoCell.swift in Sources */,

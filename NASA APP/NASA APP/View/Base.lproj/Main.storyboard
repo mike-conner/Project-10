@@ -227,6 +227,94 @@
             </objects>
             <point key="canvasLocation" x="2947" y="-286"/>
         </scene>
+        <!--Mars Photo View Controller-->
+        <scene sceneID="mEp-da-8TT">
+            <objects>
+                <viewController storyboardIdentifier="MarsPhotoViewController" id="EAt-3k-h8R" customClass="MarsPhotoViewController" customModule="NASA_APP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pT4-NH-34O">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vRx-0a-0VN">
+                                <rect key="frame" x="0.0" y="24" width="1024" height="683"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filters:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSW-YL-2UG">
+                                <rect key="frame" x="0.0" y="727" width="1024" height="36"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eMY-m4-Cs1">
+                                <rect key="frame" x="24" y="779" width="976" height="29"/>
+                                <segments>
+                                    <segment title="Origina"/>
+                                    <segment title="Color Inverted"/>
+                                    <segment title="False Color"/>
+                                    <segment title="Tonal Effect"/>
+                                    <segment title="Sepia"/>
+                                </segments>
+                                <connections>
+                                    <action selector="filterSelectionSegmentControl:" destination="EAt-3k-h8R" eventType="valueChanged" id="euz-mu-u7c"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image Text:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A32-Sh-s3m">
+                                <rect key="frame" x="24" y="823" width="118.5" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Maximum of 100 characters..." borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xcE-aV-LQu">
+                                <rect key="frame" x="166.5" y="823" width="739.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cU-Nw-GVt">
+                                <rect key="frame" x="930" y="823" width="70" height="30"/>
+                                <color key="backgroundColor" red="0.01833007671" green="0.49739444259999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="R2L-Bc-rop"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Add Text"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eMY-m4-Cs1" firstAttribute="leading" secondItem="9aT-QI-4Hg" secondAttribute="leading" constant="24" id="7zq-3W-RpS"/>
+                            <constraint firstItem="xcE-aV-LQu" firstAttribute="leading" secondItem="A32-Sh-s3m" secondAttribute="trailing" constant="24" id="Aii-FM-xZ4"/>
+                            <constraint firstItem="9aT-QI-4Hg" firstAttribute="trailing" secondItem="wSW-YL-2UG" secondAttribute="trailing" id="Exn-W6-R5s"/>
+                            <constraint firstItem="9aT-QI-4Hg" firstAttribute="trailing" secondItem="5cU-Nw-GVt" secondAttribute="trailing" constant="24" id="HQq-Yf-4vs"/>
+                            <constraint firstItem="5cU-Nw-GVt" firstAttribute="leading" secondItem="xcE-aV-LQu" secondAttribute="trailing" constant="24" id="Iyv-SV-DzS"/>
+                            <constraint firstItem="eMY-m4-Cs1" firstAttribute="top" secondItem="wSW-YL-2UG" secondAttribute="bottom" constant="16" id="KOR-zP-amX"/>
+                            <constraint firstItem="vRx-0a-0VN" firstAttribute="height" secondItem="pT4-NH-34O" secondAttribute="height" multiplier="0.5" id="LI3-SL-88x"/>
+                            <constraint firstItem="A32-Sh-s3m" firstAttribute="leading" secondItem="9aT-QI-4Hg" secondAttribute="leading" constant="24" id="M7p-cw-eHc"/>
+                            <constraint firstItem="xcE-aV-LQu" firstAttribute="top" secondItem="eMY-m4-Cs1" secondAttribute="bottom" constant="16" id="NhH-eP-Vse"/>
+                            <constraint firstItem="vRx-0a-0VN" firstAttribute="top" secondItem="9aT-QI-4Hg" secondAttribute="top" id="NtF-jc-Lf1"/>
+                            <constraint firstItem="vRx-0a-0VN" firstAttribute="leading" secondItem="9aT-QI-4Hg" secondAttribute="leading" id="XXl-uO-ns4"/>
+                            <constraint firstItem="wSW-YL-2UG" firstAttribute="leading" secondItem="9aT-QI-4Hg" secondAttribute="leading" id="dOw-o6-Eqn"/>
+                            <constraint firstItem="wSW-YL-2UG" firstAttribute="top" secondItem="vRx-0a-0VN" secondAttribute="bottom" constant="20" id="eoA-Iy-g7a"/>
+                            <constraint firstItem="A32-Sh-s3m" firstAttribute="top" secondItem="eMY-m4-Cs1" secondAttribute="bottom" constant="16" id="jaC-qI-CQp"/>
+                            <constraint firstItem="9aT-QI-4Hg" firstAttribute="trailing" secondItem="eMY-m4-Cs1" secondAttribute="trailing" constant="24" id="o7A-kL-Qvc"/>
+                            <constraint firstItem="5cU-Nw-GVt" firstAttribute="top" secondItem="eMY-m4-Cs1" secondAttribute="bottom" constant="16" id="rbA-BW-P2t"/>
+                            <constraint firstItem="9aT-QI-4Hg" firstAttribute="trailing" secondItem="vRx-0a-0VN" secondAttribute="trailing" id="tcb-Mg-Jla"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9aT-QI-4Hg"/>
+                    </view>
+                    <connections>
+                        <outlet property="filterSelectionSegmentControl" destination="eMY-m4-Cs1" id="sko-oa-hM3"/>
+                        <outlet property="imageView" destination="vRx-0a-0VN" id="zz0-S5-LuG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wet-vg-3FH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3622.8515624999995" y="-288.14055636896046"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="gkk-9D-qUc">
             <objects>

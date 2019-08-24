@@ -49,12 +49,6 @@ class PhotoGalleryViewController: UICollectionViewController {
     func getPhotos(rover: Rovers, date: String) {
         PhotoGalleryViewController.api.getMarsPhotos(rover: rover, date: date) { (photos) in
             self.marsPhotoURLs = photos
-//            print(self.marsPhotoURLs?.photos.count ?? "this is supposed to be the number of marsPhotos")
-//            var count = 0
-//            while count < self.marsPhotoURLs?.photos.count ?? 0 {
-//                print(self.marsPhotoURLs?.photos[count].img_src ?? "default value in while statement")
-//                count = count + 1
-//            }
             self.collectionView.reloadData()
         }
     }
@@ -116,5 +110,28 @@ extension PhotoGalleryViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-
+extension PhotoGalleryViewController {
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let marsPhotoViewController = MarsPhotoViewController.instantiate() else {
+            return
+        }
+        
+        marsPhotoViewController.image = ImageLoadingOptions.shared.placeholder
+        marsPhotoViewController.contentMode = .scaleAspectFit
+        
+        if let imageURL = URL(string: marsPhotoURLs?.photos[indexPath.row].img_src ?? "") {
+            ImagePipeline.shared.loadImage(with: imageURL, progress: nil) { (response, error) in
+                if error != nil {
+                    marsPhotoViewController.image = ImageLoadingOptions.shared.failureImage
+                    marsPhotoViewController.contentMode = .scaleAspectFit
+                } else {
+                    marsPhotoViewController.originalImage = response?.image
+                    marsPhotoViewController.image = response?.image
+                    marsPhotoViewController.contentMode = .scaleAspectFill
+                }
+            }
+        }
+        navigationController?.pushViewController(marsPhotoViewController, animated: true)
+    }
+}
 
