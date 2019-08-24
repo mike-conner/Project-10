@@ -49,6 +49,9 @@ class PhotoGalleryViewController: UICollectionViewController {
     func getPhotos(rover: Rovers, date: String) {
         PhotoGalleryViewController.api.getMarsPhotos(rover: rover, date: date) { (photos) in
             self.marsPhotoURLs = photos
+            if self.marsPhotoURLs?.photos.count == 0 {
+                self.showAlert(with: "We're so sorry...", and: "We have no images to show you for that day. Please go back and select a different rover or day.")
+            }
             self.collectionView.reloadData()
         }
     }
@@ -127,7 +130,7 @@ extension PhotoGalleryViewController {
                 } else {
                     marsPhotoViewController.originalImage = response?.image
                     marsPhotoViewController.image = response?.image
-                    marsPhotoViewController.contentMode = .scaleAspectFill
+                    marsPhotoViewController.contentMode = .scaleAspectFit
                 }
             }
         }
@@ -135,3 +138,13 @@ extension PhotoGalleryViewController {
     }
 }
 
+extension UICollectionViewController {
+    func showAlert(with title: String, and message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { (action) -> Void in
+            self.dismiss(animated: false, completion: nil)
+        }
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
+}
