@@ -267,16 +267,16 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Maximum of 40 characters..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xcE-aV-LQu">
-                                        <rect key="frame" x="142.5" y="0.0" width="748.5" height="30"/>
+                                        <rect key="frame" x="142.5" y="0.0" width="740.5" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cU-Nw-GVt">
-                                        <rect key="frame" x="915" y="0.0" width="61" height="30"/>
+                                        <rect key="frame" x="907" y="0.0" width="69" height="30"/>
                                         <color key="backgroundColor" red="0.01833007671" green="0.49739444259999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Add Text"/>
+                                        <state key="normal" title=" Add Text "/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="5"/>
@@ -288,16 +288,32 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yux-K5-r3t">
+                                <rect key="frame" x="470" y="913" width="84" height="30"/>
+                                <color key="backgroundColor" red="0.01833007671" green="0.49739444259999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title=" Send Email "/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sendButton:" destination="EAt-3k-h8R" eventType="touchUpInside" id="fyg-Am-RDd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="eMY-m4-Cs1" firstAttribute="leading" secondItem="9aT-QI-4Hg" secondAttribute="leading" constant="24" id="7zq-3W-RpS"/>
+                            <constraint firstItem="yux-K5-r3t" firstAttribute="top" secondItem="daF-eK-OuB" secondAttribute="bottom" constant="24" id="Ei5-Dq-mUV"/>
                             <constraint firstItem="9aT-QI-4Hg" firstAttribute="trailing" secondItem="wSW-YL-2UG" secondAttribute="trailing" id="Exn-W6-R5s"/>
                             <constraint firstItem="9aT-QI-4Hg" firstAttribute="trailing" secondItem="daF-eK-OuB" secondAttribute="trailing" constant="24" id="KSN-q8-UOR"/>
                             <constraint firstItem="vRx-0a-0VN" firstAttribute="height" secondItem="pT4-NH-34O" secondAttribute="height" multiplier="0.5" id="LI3-SL-88x"/>
                             <constraint firstItem="vRx-0a-0VN" firstAttribute="top" secondItem="9aT-QI-4Hg" secondAttribute="top" constant="24" id="NtF-jc-Lf1"/>
                             <constraint firstItem="daF-eK-OuB" firstAttribute="top" secondItem="eMY-m4-Cs1" secondAttribute="bottom" constant="24" id="Sft-TU-cIA"/>
                             <constraint firstItem="vRx-0a-0VN" firstAttribute="leading" secondItem="9aT-QI-4Hg" secondAttribute="leading" id="XXl-uO-ns4"/>
+                            <constraint firstItem="yux-K5-r3t" firstAttribute="centerX" secondItem="pT4-NH-34O" secondAttribute="centerX" id="aMa-I1-gjB"/>
                             <constraint firstItem="wSW-YL-2UG" firstAttribute="leading" secondItem="9aT-QI-4Hg" secondAttribute="leading" id="dOw-o6-Eqn"/>
                             <constraint firstItem="wSW-YL-2UG" firstAttribute="top" secondItem="vRx-0a-0VN" secondAttribute="bottom" constant="24" id="eoA-Iy-g7a"/>
                             <constraint firstItem="eMY-m4-Cs1" firstAttribute="top" secondItem="wSW-YL-2UG" secondAttribute="bottom" constant="16" id="gVw-LX-VdW"/>

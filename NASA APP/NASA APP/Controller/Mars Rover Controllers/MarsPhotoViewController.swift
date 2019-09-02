@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MessageUI
 
-class MarsPhotoViewController: UIViewController, UITextFieldDelegate {
+class MarsPhotoViewController: UIViewController, UITextFieldDelegate, MFMailComposeViewControllerDelegate {
     
     var originalImage: UIImage? {
         didSet {
@@ -62,6 +63,12 @@ class MarsPhotoViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    @IBAction func sendButton(_ sender: Any) {
+        if let imageView = imageView {
+            sendMail(imageView: imageView)
+        }
+    }
+    
     func setFilter(filter: String) {
         let context = CIContext(options: nil)
         if let currentFilter = CIFilter(name: filter), let image = image {
@@ -98,6 +105,25 @@ class MarsPhotoViewController: UIViewController, UITextFieldDelegate {
         UIGraphicsEndImageContext()
         
         return newImage
+    }
+    
+    func sendMail(imageView: UIImageView) {
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setToRecipients(["connerland@yahoo.com"])
+            mail.setSubject("Mars Rover Image")
+            mail.setMessageBody("Check out this image from the Mars Rover!", isHTML: false)
+            if let image = imageView.image {
+                let imageData: NSData = image.pngData()! as NSData
+                mail.addAttachmentData(imageData as Data, mimeType: "image/png", fileName: "imageName.png")
+            }
+            self.present(mail, animated: true, completion: nil)
+        }
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
     }
     
     static func instantiate() -> MarsPhotoViewController? {
