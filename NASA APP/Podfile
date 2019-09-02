@@ -7,11 +7,13 @@ target 'NASA APP' do
 
   pod 'Nuke', '~> 7.0'
   pod 'Alamofire', '~> 5.0.0-beta.5'
+  pod 'IQKeyboardManager'
   
 target 'NASA APPTests' do
     inherit! :search_paths
     pod 'Nuke', '~> 7.0'
     pod 'Alamofire', '~> 5.0.0-beta.5'
+    pod 'IQKeyboardManager'
   end
 
 end

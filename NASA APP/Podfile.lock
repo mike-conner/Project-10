@@ -1,20 +1,25 @@
 PODS:
   - Alamofire (5.0.0-beta.7)
+  - IQKeyboardManager (6.4.0)
   - Nuke (7.6.3)
 
 DEPENDENCIES:
   - Alamofire (~> 5.0.0-beta.5)
+  - IQKeyboardManager
   - Nuke (~> 7.0)
 
 SPEC REPOS:
-  trunk:
+  https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - Nuke
+  trunk:
+    - IQKeyboardManager
 
 SPEC CHECKSUMS:
   Alamofire: bd07938ceecad59d2492aeecb1f785a8f2721160
+  IQKeyboardManager: fcef267266379c003181fc3592f6bdb8bf4db839
   Nuke: 44130e95e09463f8773ae4b96b90de1eba6b3350
 
-PODFILE CHECKSUM: 535c9417e14acc556eebca578571312855cd5b0c
+PODFILE CHECKSUM: a1c28bbe32a4e39cb321ef3b1bd0794448a7a182
 
 COCOAPODS: 1.8.0.beta.1
