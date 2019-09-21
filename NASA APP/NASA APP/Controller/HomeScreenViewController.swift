@@ -7,19 +7,15 @@
 //
 
 import UIKit
-import Nuke
-import Alamofire
+//import Nuke
+//import Alamofire
 
 
 class HomeScreenViewController: UIViewController {
     
-    @IBAction func marsRoverButton(_ sender: Any) {
-       
-    }
+    @IBAction func marsRoverButton(_ sender: Any) {}
     
-    @IBAction func eyeInTheSkyButton(_ sender: Any) {
-        // add functionality once Mars Rover potion is complete
-    }
+    @IBAction func eyeInTheSkyButton(_ sender: Any) {}
     
     override func viewDidLoad() {
         super.viewDidLoad()

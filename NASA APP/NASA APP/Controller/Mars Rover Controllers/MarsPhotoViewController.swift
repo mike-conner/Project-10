@@ -11,12 +11,13 @@ import MessageUI
 
 class MarsPhotoViewController: UIViewController, UITextFieldDelegate, MFMailComposeViewControllerDelegate {
     
+    // create original Image for "resetting" if the user wants to remove the text and/or filters
     var originalImage: UIImage? {
         didSet {
             imageView?.image = image
         }
     }
-    
+    // this image is the image that will have the text and filters applied to it.
     var image: UIImage? {
         didSet {
             imageView?.image = image
@@ -41,6 +42,12 @@ class MarsPhotoViewController: UIViewController, UITextFieldDelegate, MFMailComp
             imageView?.image = image
         }
         imageView?.contentMode = contentMode
+        
+        if let height = imageView?.heightAnchor {
+            imageView?.widthAnchor.constraint(equalTo: height, multiplier: 1).isActive = true
+            imageView?.layer.cornerRadius = 10
+            imageView?.clipsToBounds = false
+        }
     }
     
     @IBAction func filterSelectionSegmentControl(_ sender: Any) {
@@ -58,14 +65,14 @@ class MarsPhotoViewController: UIViewController, UITextFieldDelegate, MFMailComp
         image = originalImage
         imageView?.image = image
         if let text = userInputtedImageText.text, let existingImage = imageView?.image {
-            image = textToImage(drawText: text, inImage: existingImage, atPoint: CGPoint(x: 10, y: 100))
-            imageView?.image = image
+            image = textToImage(drawText: text, inImage: existingImage, atPoint: CGPoint(x: 10, y: 100)) // call function to add text at specified CGPoints
+            imageView?.image = image // reload photo with text applied
         }
     }
     
     @IBAction func sendButton(_ sender: Any) {
         if let imageView = imageView {
-            sendMail(imageView: imageView)
+            sendMail(imageView: imageView) // call sendMail function with current image
         }
     }
     
@@ -95,7 +102,6 @@ class MarsPhotoViewController: UIViewController, UITextFieldDelegate, MFMailComp
         let scale = UIScreen.main.scale
         UIGraphicsBeginImageContextWithOptions(image.size, false, scale)
         
-        
         image.draw(in: CGRect(origin: CGPoint.zero, size: image.size))
         
         let rect = CGRect(origin: point, size: image.size)
@@ -108,10 +114,10 @@ class MarsPhotoViewController: UIViewController, UITextFieldDelegate, MFMailComp
     }
     
     func sendMail(imageView: UIImageView) {
-        if MFMailComposeViewController.canSendMail() {
+        if MFMailComposeViewController.canSendMail() { // check to see if device is set up to send mail. If not, function notifies user that they can't send mail.
             let mail = MFMailComposeViewController()
             mail.mailComposeDelegate = self
-            mail.setToRecipients(["connerland@yahoo.com"])
+            mail.setToRecipients(["connerland@yahoo.com"]) // default To: email address when email opens
             mail.setSubject("Mars Rover Image")
             mail.setMessageBody("Check out this image from the Mars Rover!", isHTML: false)
             if let image = imageView.image {
@@ -119,9 +125,12 @@ class MarsPhotoViewController: UIViewController, UITextFieldDelegate, MFMailComp
                 mail.addAttachmentData(imageData as Data, mimeType: "image/png", fileName: "imageName.png")
             }
             self.present(mail, animated: true, completion: nil)
+        } else {
+            showAlert(with: "Sorry...", and: "It does not appear that this device is set up properly to be able to send mail.")
         }
     }
     
+    // function below dismisses mail view when finished sending
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true, completion: nil)
     }
@@ -132,13 +141,23 @@ class MarsPhotoViewController: UIViewController, UITextFieldDelegate, MFMailComp
     }
 }
 
+// limit text that'll be added to photo to 50 or less characters
 extension MarsPhotoViewController {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let currentText = textField.text ?? ""
         guard let stringRange = Range(range, in: currentText) else { return false }
-        
         let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
-        
         return updatedText.count <= 50
+    }
+}
+
+extension MarsPhotoViewController {
+    func showAlert(with title: String, and message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { (action) -> Void in
+            self.dismiss(animated: false, completion: nil)
+        }
+        alert.addAction(okAction)
+        present(alert, animated: true)
     }
 }

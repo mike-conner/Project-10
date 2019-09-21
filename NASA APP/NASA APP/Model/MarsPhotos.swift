@@ -8,10 +8,12 @@
 
 import Foundation
 
+// Photos are a codable collection of photo objects.
 struct Photos: Codable {
     var photos: [Photo]
 }
 
+// Photo is a codable object consisting of a string that is the url to where the photo is stored.
 struct Photo: Codable {
     var img_src: String
 }

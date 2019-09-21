@@ -8,12 +8,14 @@
 
 import Foundation
 
+// Three available Rovers to choose from.
 enum Rovers {
     case Curiosity
     case Opportunity
     case Spirit
 }
 
+// Nine available cameras to choose from.
 enum Cameras: String {
     case FHAZ = "Front Hazard Avoidance Camera"
     case RHAZ = "Rear Hazard Avoidance Camera"

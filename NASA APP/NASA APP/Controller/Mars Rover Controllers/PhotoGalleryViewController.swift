@@ -14,17 +14,18 @@ private let reuseIdentifier = "PhotoCell"
 
 class PhotoGalleryViewController: UICollectionViewController {
     
-    static let api = WebAPI()
+    static let api = WebAPI() // create the WebAPI object for networking call.
     
+    // variables below assigned with information sent from previous VC
     var userSelectedRover: Rovers?
     var userSelectedDate: String?
     
-    var marsPhotoURLs: Photos?
-        
+    var marsPhotoURLs: Photos? // create an empty Photos object (collection of Photo objects)
+    
+    // variables for the display of the collection view
     let cellSpacing: CGFloat = 1
     let columns: CGFloat = 2
     var cellSize: CGFloat = 0
-    
     var pixelSize: CGFloat {
         get {
             return cellSize * UIScreen.main.scale
@@ -33,20 +34,21 @@ class PhotoGalleryViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.topItem?.title = "Mars Rover Photos"
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "New Search", style: .done, target: self, action: #selector(goBack))
+        navigationController?.navigationBar.topItem?.title = "Mars Rover Photos" // create title for VC
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "New Search", style: .done, target: self, action: #selector(newSearch)) // create "New Search" option on the title bar for going back to the previous VC so the user can make a new search.
         if let rover = userSelectedRover, let date = userSelectedDate {
-            getPhotos(rover: rover, date: date)
+            getPhotos(rover: rover, date: date) // call function and pass in user selected data
         }
-        loadPhotos()
+        loadPhotos() // load photos returned from getPhotos function
     }
     
     @objc
-    func goBack() {
-        dismiss(animated: true, completion: nil)
+    func newSearch() {
+        dismiss(animated: true, completion: nil) // when "New Search" is pressed, simply dismiss the current VC
     }
 
     func getPhotos(rover: Rovers, date: String) {
+        // call getMarsPhotos function from networking code. Take returned 'photos' and assign to marsPhotoURLs. If .count == 0, then no photos are available and notify user. Otherwise, reload collectionView.
         PhotoGalleryViewController.api.getMarsPhotos(rover: rover, date: date) { (photos) in
             self.marsPhotoURLs = photos
             if self.marsPhotoURLs?.photos.count == 0 {
@@ -57,14 +59,13 @@ class PhotoGalleryViewController: UICollectionViewController {
     }
     
     func loadPhotos() {
+        // load photos using Nuke. Includes animation for project requirement. See Nuke documentation for additional description.
         let contentModes = ImageLoadingOptions.ContentModes(success: .scaleAspectFill, failure: .scaleAspectFit, placeholder: .scaleAspectFit)
-        
         ImageLoadingOptions.shared.placeholder = UIImage(named: "dark-moon")
         ImageLoadingOptions.shared.failureImage = UIImage(named: "annoyed")
         ImageLoadingOptions.shared.transition = .fadeIn(duration: 1.0)
         ImageLoadingOptions.shared.contentModes = contentModes
-        
-        DataLoader.sharedUrlCache.diskCapacity = 0
+        DataLoader.sharedUrlCache.diskCapacity = 100
         
         let pipeline = ImagePipeline {
             $0.dataCache = try! DataCache(name: "com.mikeconner.NASA-APP.datacache")
@@ -73,7 +74,6 @@ class PhotoGalleryViewController: UICollectionViewController {
     }
     
     // MARK: UICollectionViewDataSource
-
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
         return marsPhotoURLs?.photos.count ?? 25
@@ -100,7 +100,6 @@ extension PhotoGalleryViewController: UICollectionViewDelegateFlowLayout {
             cellSize = (view.frame.size.width - emptySpace) / columns
             return CGSize(width: cellSize, height: cellSize)
         }
-        
         return CGSize()
     }
     

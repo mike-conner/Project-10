@@ -17,7 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Next line of code allows for the shifting of the screen when the keyboard is going to overlap the text field/box when shown.
         IQKeyboardManager.shared().isEnabled = true
+        
         return true
     }
 
