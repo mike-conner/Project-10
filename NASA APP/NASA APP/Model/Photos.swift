@@ -17,3 +17,7 @@ struct Photos: Codable {
 struct Photo: Codable {
     var img_src: String
 }
+
+struct Image: Codable {
+    var url: String
+}
