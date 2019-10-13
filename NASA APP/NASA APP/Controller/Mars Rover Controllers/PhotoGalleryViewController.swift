@@ -83,7 +83,7 @@ class PhotoGalleryViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! PhotoCell
     
         // Configure the cell
-        if let imageURL = URL(string: marsPhotoURLs?.photos[indexPath.row].img_src ?? "") {
+        if let imageURL = URL(string: marsPhotoURLs?.photos[indexPath.row].imgSrc ?? "") {
             let request = ImageRequest(url: imageURL, targetSize: CGSize(width: pixelSize, height: pixelSize), contentMode: .aspectFill)
             Nuke.loadImage(with: request, into: cell.imageView)
         }
@@ -121,7 +121,7 @@ extension PhotoGalleryViewController {
         marsPhotoViewController.image = ImageLoadingOptions.shared.placeholder
         marsPhotoViewController.contentMode = .scaleAspectFit
         
-        if let imageURL = URL(string: marsPhotoURLs?.photos[indexPath.row].img_src ?? "") {
+        if let imageURL = URL(string: marsPhotoURLs?.photos[indexPath.row].imgSrc ?? "") {
             ImagePipeline.shared.loadImage(with: imageURL, progress: nil) { (response, error) in
                 if error != nil {
                     marsPhotoViewController.image = ImageLoadingOptions.shared.failureImage

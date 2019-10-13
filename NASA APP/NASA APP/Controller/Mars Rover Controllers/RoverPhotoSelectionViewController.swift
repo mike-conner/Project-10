@@ -24,7 +24,7 @@ class RoverPhotoSelectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         roverSelectionSegmentControl.selectedSegmentIndex = 0
-        userSelectedRover = .Curiosity // set the default selection when the view loads
+        userSelectedRover = .curiosity // set the default selection when the view loads
         getDateFromDatePicker() // set the default date when the view loads
     }
     
@@ -48,9 +48,9 @@ class RoverPhotoSelectionViewController: UIViewController {
     
     func getSelectedRover() {
         switch roverSelectionSegmentControl.selectedSegmentIndex {
-        case 0: userSelectedRover = .Curiosity
-        case 1: userSelectedRover = .Opportunity
-        case 2: userSelectedRover = .Spirit
+        case 0: userSelectedRover = .curiosity
+        case 1: userSelectedRover = .opportunity
+        case 2: userSelectedRover = .spirit
         default: return
         }
     }

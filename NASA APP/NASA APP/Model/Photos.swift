@@ -15,7 +15,8 @@ struct Photos: Codable {
 
 // Photo is a codable object consisting of a string that is the url to where the photo is stored.
 struct Photo: Codable {
-    var img_src: String
+    var imgSrc: String
+//    var img_src: String
 }
 
 struct Image: Codable {

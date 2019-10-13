@@ -10,7 +10,7 @@ import Foundation
 
 // Three available Rovers to choose from.
 enum Rovers {
-    case Curiosity
-    case Opportunity
-    case Spirit
+    case curiosity
+    case opportunity
+    case spirit
 }
