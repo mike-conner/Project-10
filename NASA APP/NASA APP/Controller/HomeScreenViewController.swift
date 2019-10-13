@@ -7,9 +7,6 @@
 //
 
 import UIKit
-//import Nuke
-//import Alamofire
-
 
 class HomeScreenViewController: UIViewController {
     

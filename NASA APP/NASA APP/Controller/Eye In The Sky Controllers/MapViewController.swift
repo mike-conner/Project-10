@@ -18,6 +18,7 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // create a gesture recognizer that gets the coordinates of a location based on where the user touches on the map
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(showImage(gestureRecognizer:)))
         gestureRecognizer.delegate = self as? UIGestureRecognizerDelegate
         mapView.addGestureRecognizer(gestureRecognizer)        
