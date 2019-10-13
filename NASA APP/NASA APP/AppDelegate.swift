@@ -50,7 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 // Performance Testing
 //
 // I performed 'Time Profiler' and everything appeared to be working as expected.
-// I performed 'Leaks' and while there were 15 leaks during Mars Rover portion of the app, it appeared that most were associated with functions in the 3rd party libraries Alamofire and Nuke.
+// I performed 'Leaks' and while there were 15 leaks during Mars Rover portion of the app, however it appeared that most were associated with functions in the 3rd party libraries Alamofire and Nuke.
 // I performed 'Zombies' but did not identify any.
 
 

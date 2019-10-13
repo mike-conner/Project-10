@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-// Shhhhh... this is my API Key. Don't share please. :)
+// Shhhhh... this is my API Key. Don't share please. :D
 private let API_KEY = "XOl7yfT1mAZlsf3ZsQhMfbUXyG0XSbjzf14dX80z"
 
 // Below is my Networking code which utilizes Alamofire.
@@ -36,6 +36,7 @@ class WebAPI {
     
     func getEyeInTheSkyPhoto(lat: Double, lon: Double, completed: @escaping (_ image: Image) -> Void) {
         guard let url = URL(string: "https://api.nasa.gov/planetary/earth/imagery/?lon=\(lon)&lat=\(lat)&api_key=\(API_KEY)") else { return }
+//        guard let url = URL(string: "https://api.nasa.gov/planetary/earth/imagery/?lon=100.75&lat=1.5&api_key=DEMO_KEY") else { return }
         AF.request(url, method: .get).responseJSON { (response) in
             switch response.result {
             case .success:
@@ -44,7 +45,11 @@ class WebAPI {
                     let myResponse = try JSONDecoder().decode(Image.self, from: data)
                     completed(myResponse)
                 }
-                catch { print("JSON did not decode successfully") }
+                catch {
+                    print("JSON did not decode successfully")
+                    let myResponse = Image(url: "")
+                    completed(myResponse)
+                }
             case .failure(let error): print(error)
             }
         }
